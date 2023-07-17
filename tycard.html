@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ca7dc39334.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js" defer></script>
+    <script src="js/qrcode.js" defer></script>
+
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/boutique.css">
+    <link rel="stylesheet" href="style/qrcode.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <title>TY'Card | La carte de visite sans contact</title>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt=""></a>
+          </div>
+          <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="contact.html">Me contacter</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+      <h1>Ma Carte de Visite</h1>
+      <p>La carte NFC offre une expérience utilisateur unique en permettant aux personnes de scanner simplement la carte avec leur smartphone compatible NFC. Une fois scannée, la carte NFC peut transférer instantanément mes coordonnées professionnelles.</p>
+      <p>Cela facilite l'établissement de nouveaux contacts professionnels et garantit que vous disposez toujours de mes coordonnées à portée de main.</p>
+        
+ 
+      <div class="cardqrcode">
+        <div class="card">
+        <div class="card-name">
+            <h2 class="name">John Doe</h2>
+            <p class="contact-info">Tél: 123-456-789</p>
+            <p class="contact-info email">Email: john@example.com</p>
+        </div>
+      </div>
+        <div class="card">
+        <div class="card-detail">
+            <img class="qr-image" src="img/git.png" alt="QR Code">
+            <div class="slogan"><p>phrase d'achroche</p></div>
+        </div>
+    </div>
+  </div>
+      <div class="avantage">
+        <h3 class="sans-contact">Une carte sans contact</h3>
+        <p>Une carte de visite NFC intègre une puce NFC qui permet aux utilisateurs de partager instantanément leurs coordonnées et leurs informations professionnelles en un simple contact avec un smartphone compatible NFC</p>
+        <h3 class="sans-application">Simplifiez vos échanges professionnels et impressionnez vos contacts</h3>
+        <p>Cette technologie sans fil permet d'établir une connexion rapide et sécurisée entre la carte de visite et le smartphone, éliminant ainsi le besoin de saisir manuellement les informations de contact. Il suffit de rapprocher le téléphone de la carte de visite pour que les données soient transférées automatiquement.</p>
+        <p>Avec une carte de visite NFC, vous restez à la pointe de la technologie et vous vous démarquez de vos concurrents. Vous montrez votre engagement envers l'innovation et vous facilitez les échanges professionnels pour vous et vos contacts.</p>
+        <p>Contactez-nous dès aujourd'hui pour obtenir votre
+        <div class="qrcode-container">
+            <h2 class="title">La carte de visite sans contact</h2>
+            <p>La carte NFC offre une expérience utilisateur unique en permettant aux personnes de scanner simplement la carte avec leur smartphone compatible NFC. Une fois scannée, la carte NFC peut transférer instantanément mes coordonnées professionnelles.</p>
+            <p>Cela facilite l'établissement de nouveaux contacts professionnels et garantit que vous disposez toujours de mes coordonnées à portée de main.</p>
+        
+            <h3>Confiance de nos clients</h3>
+            <p class="confiance">Ils nous ont fait confiance :</p>
+            <div class="carousel">
+                <a href="https://www.facebook.com/mawuliethiopieI"><img src="img/cdv/cdv2.webp" alt="Client 1"></a>
+                <a href="https://www.instagram.com/isaac.ahamada"><img src="img/cdv/cdv7.webp" alt="Client 2"></a>
+                <a href="https://facebook.com/sospelleservices"><img src="img/cdv/cdv3.webp" alt="Client 2"></a> 
+                <a href="https://www.instagram.com/cornouaille_amenagements/"><img src="img/cdv/cdv4.webp" alt="Client 3"></a>
+                <img src="img/cdv/cdv5.webp" alt="Client 4">
+                <img src="img/cdv/cdv6.webp" alt="Client 5">
+                <img src="img/cdv/cdv8.webp" alt="Client 6">
+            </div>
+            
+            <div class="content">
+                <form id="vcardForm">
+                  <h3>Génerateur de QR code pour vcard <span>(Seul l'adresse mail est obligatoire)</span></h3>
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile:</label>
+                        <input type="tel" id="mobile" name="mobile" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="website">Website:</label>
+                        <input type="url" id="website" name="website" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company:</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Position:</label>
+                        <input type="text" id="position" name="position" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postalCode">Postal Code:</label>
+                        <input type="text" id="postalCode" name="postalCode" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="facebook">Facebook:</label>
+                        <input type="url" id="facebook" name="facebook">
+                    </div>
+                    <div class="form-group">
+                        <label for="instagram">Instagram:</label>
+                        <input type="url" id="instagram" name="instagram">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn:</label>
+                        <input type="url" id="linkedin" name="linkedin">
+                    </div>
+                    
+                    <button type="submit" class="button__generate" id="generateQR">GENERATE</button>
+                    <button type="button" class="button__clear" id="clearForm">CLEAR</button>
+                    <button type="button" id="sendEmailButton" class="button__download" onclick="sendEmail()">SEND</button>
+                  
+                </form>
+                <div class="qr" id="qr"></div>
+            </div>
+        </div>
+        <div id="statusMessage"></div>
+
+        <div class="avantage">
+            <h3 class="sans-contact">Une carte sans contact</h3>
+            <p>Une carte de visite NFC intègre une puce NFC qui permet aux utilisateurs de partager instantanément leurs coordonnées et leurs informations professionnelles en un simple contact avec un smartphone compatible NFC</p>
+            <h3 class="sans-application">Simplifiez vos échanges professionnels et impressionnez vos contacts</h3>
+            <p>Cette technologie sans fil permet d'établir une connexion rapide et sécurisée entre la carte de visite et le smartphone, éliminant ainsi le besoin de saisir manuellement les informations de contact. Il suffit de rapprocher le téléphone de la carte de visite pour que les données soient transférées automatiquement.</p>
+            <p>Avec une carte de visite NFC, vous restez à la pointe de la technologie et vous vous démarquez de vos concurrents. Vous montrez votre engagement envers l'innovation et vous facilitez les échanges professionnels pour vous et vos contacts.</p>
+            <p>Contactez-nous dès aujourd'hui pour obtenir votre carte de visite NFC personnalisée et impressionnez vos contacts avec cette solution pratique et moderne. Simplifiez votre réseau professionnel avec une carte de visite qui fait la différence.</p>
+
+            
+        </div>
+        <div class="personnalise">Vous pouvez proposez votre model personnalisé ne vous rendant <a href="carte.html">ici</a></div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="links">
+            <ul>
+                <li><a href="project.html">Mes projets</a></li>
+                <li><a href="contact.html">Contactez-moi</a></li>
+                <li><a href="boutique.html">Supports de communications</a></li>
+                <li>
+                    <a href="https://facebook.com/tykadesign">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/mikl291">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="text-center">
+                &copy; TYKA
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                - Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/boutique.js" defer></script>
+    <script src="js/qrcode.js" defer></script>
+    <script>
+      function QRcode() {
+        const form = document.getElementById("vcardForm");
+        const formData = new FormData(form);
+
+        // Récupérer les valeurs saisies dans le formulaire
+        const firstName = formData.get("firstName") || "";
+        const lastName = formData.get("lastName") || "";
+        const email = formData.get("email") || "";
+        const phone = formData.get("phone") || "";
+        const mobile = formData.get("mobile") || "";
+        const website = formData.get("website") || "";
+        const company = formData.get("company") || "";
+        const position = formData.get("position") || "";
+        const address = formData.get("address") || "";
+        const postalCode = formData.get("postalCode") || "";
+        const city = formData.get("city") || "";
+
+        // Vérifier si l'adresse e-mail est saisie
+        if (!email) {
+          // Afficher un message d'erreur ou effectuer une action appropriée
+          alert("Veuillez saisir une adresse e-mail.");
+          return; // Arrêter l'exécution de la fonction
+        }
+
+        // Générer la vCard en utilisant les valeurs saisies
+        const vcard = `BEGIN:VCARD
+VERSION:3.0
+N:${lastName};${firstName}
+FN:${firstName} ${lastName}
+ORG:${company}
+TITLE:${position}
+ADR:;;${address};${city};${postalCode};
+TEL;CELL:${phone}
+TEL;CELL:${mobile}
+EMAIL:${email}
+URL:${website}
+END:VCARD`;
+
+        const QR = document.getElementById("qr");
+        QR.innerHTML = ""; // Effacer le contenu précédent du QR code
+
+        const qrCode = new QRCodeStyling({
+          width: 200,
+          height: 200,
+          type: "png",
+          data: vcard,
+          margin: 0,
+        });
+
+        qrCode.append(QR);
+      }
+
+      document.getElementById("generateQR").addEventListener("click", (e) => {
+        e.preventDefault();
+        QRcode();
+      });
+
+      document.getElementById("downloadButton").addEventListener("click", () => {
+        const qrCodeImage = document.querySelector("#qr img");
+
+        // Vérifier si l'image du QR code existe
+        if (qrCodeImage) {
+          // Créer un lien de téléchargement
+          const link = document.createElement("a");
+          link.href = qrCodeImage.src;
+          link.download = "qr_code.png"; // Spécifier le nom du fichier à télécharger
+
+          // Cliquez sur le lien pour déclencher le téléchargement
+          link.click();
+        }
+      });
+
+      // Réinitialisation du formulaire
+      document.getElementById("clearForm").addEventListener("click", () => {
+        const form = document.getElementById("vcardForm");
+        form.reset();
+        const QR = document.getElementById("qr");
+        QR.innerHTML = "";
+      });
+
+      // Importer la bibliothèque QRCode
+      import QRCode from 'qrcode';
+
+      function sendEmail() {
+        // Capturer les données du formulaire
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        // ...
+
+        // Générer l'URL "mailto"
+        var mailtoUrl = "mailto:" + email +
+          "?subject=Carte%20de%20visite" +
+          "&body=Bonjour%20,%0D%0A%0D%0AVoici%20mes%20coordonn%C3%A9es%20professionnelles%3A%0D%0A%0D%0A" +
+          "Pr%C3%A9nom%3A%20" + encodeURIComponent(firstName) + "%0D%0A" +
+          "Nom%3A%20" + encodeURIComponent(lastName) + "%0D%0A" +
+          // ...
+
+        // Générer le QR code
+        QRCode.toDataURL(mailtoUrl, function (err, qrImageUrl) {
+          if (err) {
+            console.error(err);
+            return;
+          }
+
+          // Ajouter l'URL de l'image au corps du message
+          mailtoUrl += "%0D%0A%0D%0AQR%20Code%3A%0D%0A" + encodeURIComponent(qrImageUrl);
+
+          // Ouvrir l'URL "mailto" dans une nouvelle fenêtre
+          window.open(mailtoUrl);
+        });
+      }
+    </script>
+</body>
+</html>
