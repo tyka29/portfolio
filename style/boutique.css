@@ -1,0 +1,214 @@
+* {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Agdasima", sans-serif;
+  overflow-x: hidden;
+  text-decoration: none;
+  text-transform: none;
+}
+
+header {
+  background-color: #aaa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.logo img {
+  height: 4rem;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #007bff;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.cardqrcode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 2px 8px;
+  padding: 20px;
+  flex: 1;
+  margin-right: 20px;
+  width: 320px;
+  height: 201px;
+  border-radius: 1rem;
+}
+
+.card-name h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.card-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-image {
+  width: 100px;
+  position: relative;
+    top: 15%;
+    left: 1%;
+}
+
+.avantage {
+  margin-bottom: 40px;
+}
+
+.avantage h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.avantage p {
+  margin-bottom: 20px;
+}
+
+.qrcode-container {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.confiance {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.carousel img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Pied de page */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer li {
+  margin-right: 10px;
+}
+
+.footer a {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #007bff;
+}

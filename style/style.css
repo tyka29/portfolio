@@ -1,0 +1,571 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0;
+}
+
+body {
+  font-family: "Agdasima", sans-serif;
+  overflow-x: hidden;
+  text-decoration: none;
+  text-transform: none;
+}
+
+
+header {
+  background-color: #d3d3d3;
+  padding: 10px;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin:0;
+}
+
+.logo img {
+  flex: 1;
+  width: 4rem;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+}
+
+main {
+  padding: 20px;
+}
+main h1,h2 {
+  margin-top: 2rem;
+}
+#form {
+  display: block;
+  background-image: url("../img/responsive.webp");
+  background-size: 20%; ;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 230px;
+  margin-right: -40px;
+}
+
+.search-box {
+  border: 1px solid #8A187B;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 1rem 0 0 1rem;
+}
+
+#input-search::placeholder {
+  color: #8A187B;;
+  opacity: 0.3;
+}
+
+.btn-search {
+  border-radius: 0 1rem 1rem 0;
+  background-color: #8A187B;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 16px 8px 10px;
+  cursor: pointer;
+  margin-left: -5px;
+}
+
+.btn-search i {
+  display: none;
+}
+.btn-search:hover{
+  background-color: #d412bb;
+}
+
+.thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  background-color: #d3d3d3;
+  border-radius: 10px;
+padding: 20px;
+}
+
+.project-thumbnail {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
+}
+
+.project-thumbnail img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-thumbnail h3, p {
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+.project-thumbnail span {
+  text-decoration: underline;
+}
+
+.project-thumbnail a {
+  display: flex;
+    padding: 10px 0px;
+    background-color: #8A187B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 50%;
+}
+.project-thumbnail a:hover{
+  background-color: #5a034e;
+}
+
+.thumbnails-perso {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #d3d3d3;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.perso-thumbnail {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
+}
+
+.perso-thumbnail img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 10px;
+}
+
+.perso-thumbnail h1 {
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+.perso-thumbnail p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.perso-thumbnail span {
+  text-decoration: underline;
+}
+
+.perso-thumbnail a {
+  display: flex;
+  padding: 10px 0px;
+  background-color: #8A187B;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 50%;
+}
+.perso-thumbnail a:hover{
+  background-color: #5a034e;
+}
+
+#contact {
+  margin: 5rem auto;
+  padding: 2rem;
+}
+
+#contact h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#contact p {
+  margin-bottom: 0.5rem;
+  
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  background-color: #d1d1d1;
+  padding: 20px;
+  border-radius: 1rem;
+}
+
+#contact form {
+  width: 100%;
+}
+
+#contact form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+#contact form input,
+#contact form textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  width: 100%;
+  border: none;
+}
+
+#contact form textarea {
+  width: 100%;
+}
+
+.custom-button {
+  display: block;
+  width: 30%;
+  padding: 0.75rem 1.5rem;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2rem;
+  transition: background-color 0.3s ease;
+}
+#contact form .custom-button:hover {
+  background-color: #8A187B;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer ul li {
+  margin-right: 20px;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer i {
+  font-size: 25px;
+}
+.fa-facebook:hover{
+  color: #4267B2;
+}
+.fa-github:hover {
+  color: black;
+}
+
+.footer .text-center {
+  font-size: 10px;
+}
+
+footer .social {
+  display: flex;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    padding: 10px;
+    flex-direction: column;
+  }
+  ul{
+    position: relative;
+    bottom: 100%;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .search-box {
+    padding: 7px 7px 11px 12px;
+  }
+  .btn-search {
+    font-size: 16px;
+    padding: 10px 10px 13px 12px;
+  }
+
+  .links li a {
+    font-size: 20px;
+  }
+
+  .head {
+    padding: 1rem;
+  }
+
+  .head h2 {
+    font-size: 20px;
+  }
+
+  .card-image {
+    width: 200px;
+    height: 130px;
+  }
+
+  .head p {
+    font-size: 14px;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  .head .btn {
+    padding: 0.5rem 1rem;
+  }
+
+  .thumbnails {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .project-thumbnail {
+    width: 250px;
+    padding: 15px;
+  }
+
+  .project-thumbnail img {
+    width: 160px;
+    height: 160px;
+  }
+
+  #contact {
+    max-width: 600px;
+  }
+
+  #contact h3 {
+    font-size: 20px;
+  }
+
+  #contact form {
+    max-width: 350px;
+  }
+
+  #contact form input,
+  #contact form textarea {
+    font-size: 14px;
+    padding: 0.4rem;
+  }
+
+  #contact form .custom-button {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+  }
+
+  .product {
+    flex-direction: column;
+  }
+
+  .product-article {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    margin: 0 auto;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .footer ul li a {
+    font-size: 16px;
+  }
+  .footer .text-center {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+  }
+  .logo {
+    margin: 0 auto
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .menu li {
+    margin: 10px 0;
+    border: 2px solid;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+  }
+  .menu li a {
+    color: white;
+  }
+
+  #form {
+    display: block;
+    margin: 1rem auto;
+  }
+
+  .fa-solid .fa-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #input-search {
+    border: 1px solid #d2d2d2;
+    font-size: 17px;
+    width: 50%;
+    font-weight: bold;
+    padding: 7px 0 8px 10px;
+    margin-left: 0px;
+  }
+
+  ::placeholder {
+    color: #000;
+  }
+
+  .btn-search {
+    border-radius: 0 10px 10px 0;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    font-size: 21px;
+    padding: 6px 17px 11px 22px;
+    cursor: pointer;
+    margin-left: -5px;
+  }
+
+  .btn-search i {
+    display: flex;
+  }
+
+  .btn-search span {
+    display: none;
+  }
+
+
+  .head h2 {
+    font-size: 18px;
+  }
+
+  .card-image {
+    width: 160px;
+    height: 100px;
+  }
+
+  .head p {
+    font-size: 12px;
+  }
+
+  .head .btn {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .project-thumbnail {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .project-thumbnail img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .project-thumbnail:hover {
+    transform: none;
+  }
+  .project-thumbnail:hover img{
+    transform: none;
+  }
+  .project-thumbnail:hover h3 {
+    color: #000;
+}
+.project-thumbnail:hover p {
+  color: #000;
+}
+.project-thumbnail a:hover {
+  background-color: grey;
+  color: white;
+}
+
+  #contact h3 {
+    font-size: 18px;
+  }
+
+  #contact form input,
+  #contact form textarea {
+    font-size: 12px;
+    padding: 0.3rem;
+  }
+
+  #contact form .custom-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 12px;
+  }
+  
+  .footer ul li a {
+    font-size: 13px;
+  }
+
+}
