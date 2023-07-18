@@ -1,7 +1,7 @@
-var message_valeur = document.querySelector(".information").children[1];
+require('dotenv').config();
+
 var firstName, lastName, email, phone, mobile, website, company, position, address, postalCode, city;
 var valeur;
-
 
 document.forms[0].onchange = () => {
     console.log("chargement");
@@ -100,9 +100,8 @@ function shareByEmail() {
     var qrCodeLink = 'Lien du QR code : ' + qr.toDataURL();
   
     // Générer le lien de partage par e-mail
-    var mailToLink = 'mailto:?subject=Partage de ma carte de visite&body=' + encodeURIComponent(emailContent + qrCodeLink);
-  
+    var mailToLink = 'mailto:' + process.env.MAIL_ADRESS + '?subject=Partage de ma carte de visite&body=' + encodeURIComponent(emailContent + qrCodeLink);
+
     // Ouvrir la fenêtre de composition d'e-mail avec les données pré-remplies
     window.location.href = mailToLink;
-  }
-  
+}
