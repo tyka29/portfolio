@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/ca7dc39334.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style/style.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ6W1MP7XR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DZ6W1MP7XR');
+  </script>
+
+  <title>Tyka web design</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt=""></a>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="contact.html">Me contacter</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+</header>
+
+<main>
+  <form action="#" id="form">
+      <input class="search-box" type="search" name="search" placeholder="Contactez-moi" id="input-search">
+      <button class="btn-search" id="contact-button" aria-label="Envoyer">
+        <span>Envoyer</span>
+        <i class="fa-solid fa-message"></i>
+      </button>
+  </form>
+
+  <section class="all_thumbnails" id="project">
+      <div class="thumbnails"></div>
+  </section>
+
+  <section id="contact">
+      <h3>Donner une dimension visuelle à votre entreprise</h3>
+      <p>Chaque projet est différent et a besoin d'une étude personnalisée. Je propose des devis sur mesure en fonction de vos besoins.</p>
+      <p>Pour un devis de site internet : merci de préciser la liste des pages, les fonctionnalités, si vous avez des préférences en style de design, etc.</p>
+      <p>Pour vos projets d'impression (plaquette, catalogue, flyer...) : merci d'indiquer le format et le nombre de pages envisagées.</p>
+      <div class="form-container">
+        <form action="https://formspree.io/xbjebgka" method="POST">
+          <label for="email">Adresse e-mail</label>
+          <input id="email" type="email" name="email" required>
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" required></textarea>
+          <button class="custom-button" type="submit">Envoyer</button>
+        </form>
+      </div>
+    </section>
+    
+    
+    
+    
+</main>
+
+<footer class="footer">
+      <div class="links">
+          <ul>
+              <li><a href="project.html">Mes projets</a></li>
+              <li><a href="contact.html">Contactez-moi</a></li>
+          
+            <li>
+              <a href="https://facebook.com/tykadesign">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/mikl291">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+          </ul>
+          <p class="text-center">
+            &copy; TYKA
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+            - Tous droits réservés.
+        </p>
+          </ul>
+      </div>
+</footer>
+
+<script src="js/script.js" defer></script>
+<script src="js/mail.js" defer></script>
+</body>
+</html>

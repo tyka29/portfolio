@@ -70,11 +70,12 @@ main h1,h2 {
 
 .btn-search {
   border-radius: 0 1rem 1rem 0;
+  border: none;
   background-color: #8A187B;
   color: white;
   font-weight: bold;
   font-size: 18px;
-  padding: 8px 16px 8px 10px;
+  padding: 9px 16px 9px 10px;
   cursor: pointer;
   margin-left: -5px;
 }
@@ -274,6 +275,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   margin-bottom: 10px;
 }
 
