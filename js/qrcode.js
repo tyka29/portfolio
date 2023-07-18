@@ -1,97 +1,108 @@
-function QRcode() {
-  const form = document.getElementById("vcardForm");
-  const formData = new FormData(form);
+var message_valeur = document.querySelector(".information").children[1];
+var firstName, lastName, email, phone, mobile, website, company, position, address, postalCode, city;
+var valeur;
 
-  // Récupérer les valeurs saisies dans le formulaire
-  const firstName = formData.get("firstName") || "";
-  const lastName = formData.get("lastName") || "";
-  const email = formData.get("email") || "";
-  const phone = formData.get("phone") || "";
-  const mobile = formData.get("mobile") || "";
-  const website = formData.get("website") || "";
-  const company = formData.get("company") || "";
-  const position = formData.get("position") || "";
-  const address = formData.get("address") || "";
-  const postalCode = formData.get("postalCode") || "";
-  const city = formData.get("city") || "";
 
-  // Vérifier si l'adresse e-mail est saisie
-  if (!email) {
-    // Afficher un message d'erreur ou effectuer une action appropriée
-    alert("Veuillez saisir une adresse e-mail.");
-    return; // Arrêter l'exécution de la fonction
-  }
-
-  // Générer la vCard en utilisant les valeurs saisies
-  const vcard = `BEGIN:VCARD
-VERSION:3.0
-N:${lastName};${firstName}
-FN:${firstName} ${lastName}
-ORG:${company}
-TITLE:${position}
-ADR:;;${address};${city};${postalCode};
-TEL;CELL:${phone}
-TEL;CELL:${mobile}
-EMAIL:${email}
-URL:${website}
-END:VCARD`;
-
-  const QR = document.getElementById("qr");
-  QR.innerHTML = ""; // Effacer le contenu précédent du QR code
-
-  const qrCode = new QRCodeStyling({
-    width: 150,
-    height: 150,
-    type: "png",
-    data: vcard,
-    margin: 0,
-  });
-
-  qrCode.append(QR);
+document.forms[0].onchange = () => {
+    console.log("chargement");
 }
 
-document.getElementById("generateQR").addEventListener("click", (e) => {
-  e.preventDefault();
-  QRcode();
+var qr = new QRious({
+    element: document.querySelector('.qrious'),
+    size: 250
 });
 
-document.getElementById("downloadButton").addEventListener("click", () => {
-  const qrCodeImage = document.querySelector("#qr img");
+function change(element) {
+    switch (element.id) {
+        case "firstName":
+            firstName = element.value;
+            break;
+        case "lastName":
+            lastName = element.value;
+            break;
+        case "email":
+            email = element.value;
+            break;
+        case "phone":
+            phone = element.value;
+            break;
+        case "mobile":
+            mobile = element.value;
+            break;
+        case "website":
+            website = element.value;
+            break;
+        case "company":
+            company = element.value;
+            break;
+        case "position":
+            position = element.value;
+            break;
+        case "address":
+            address = element.value;
+            break;
+        case "postalCode":
+            postalCode = element.value;
+            break;
+        case "city":
+            city = element.value;
+            break;
+    }
 
-  // Vérifier si l'image du QR code existe
-  if (qrCodeImage) {
-    // Créer un lien de téléchargement
-    const link = document.createElement("a");
-    link.href = qrCodeImage.src;
-    link.download = "qr_code.png"; // Spécifier le nom du fichier à télécharger
+    var vCardData = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'N:' + lastName + ';' + firstName + ';;;',
+        'FN:' + firstName + ' ' + lastName,
+        'EMAIL;TYPE=INTERNET:' + email,
+        'TEL;TYPE=WORK:' + phone,
+        'TEL;TYPE=CELL:' + mobile,
+        'URL:' + website,
+        'ORG:' + company,
+        'TITLE:' + position,
+        'ADR;TYPE=WORK:;;' + address + ';;' + city + ';;' + postalCode + ';;',
+        'END:VCARD'
+    ].join('\n');
 
-    // Cliquez sur le lien pour déclencher le téléchargement
-    link.click();
+    qr.value = vCardData;
+}
+
+function shareByEmail() {
+    // Récupérer les valeurs des champs du formulaire
+    var formData = {
+      firstName: document.getElementById('firstName').value,
+      lastName: document.getElementById('lastName').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      mobile: document.getElementById('mobile').value,
+      website: document.getElementById('website').value,
+      company: document.getElementById('company').value,
+      position: document.getElementById('position').value,
+      address: document.getElementById('address').value,
+      postalCode: document.getElementById('postalCode').value,
+      city: document.getElementById('city').value
+    };
+  
+    // Générer le contenu de l'e-mail
+    var emailContent = 'Bonjour,\n\nVoici mon QR code vCard et mes informations de contact :\n\n';
+    emailContent += 'Nom : ' + formData.lastName + ' ' + formData.firstName + '\n';
+    emailContent += 'E-mail : ' + formData.email + '\n';
+    emailContent += 'Téléphone : ' + formData.phone + '\n';
+    emailContent += 'Mobile : ' + formData.mobile + '\n';
+    emailContent += 'Site Web : ' + formData.website + '\n';
+    emailContent += 'Entreprise : ' + formData.company + '\n';
+    emailContent += 'Poste : ' + formData.position + '\n';
+    emailContent += 'Adresse : ' + formData.address + '\n';
+    emailContent += 'Code postal : ' + formData.postalCode + '\n';
+    emailContent += 'Ville : ' + formData.city + '\n';
+  
+    // Générer le lien du QR code
+    var qrCodeLink = 'Lien du QR code : ' + qr.toDataURL();
+  
+    // Générer le lien de partage par e-mail
+    var mailToLink = 'mailto:?subject=Partage de ma carte de visite&body=' + encodeURIComponent(emailContent + qrCodeLink);
+  
+    // Ouvrir la fenêtre de composition d'e-mail avec les données pré-remplies
+    window.location.href = mailToLink;
   }
-});
-
-document.getElementById("sendEmailButton").addEventListener("click", () => {
-  const qrCodeImage = document.querySelector("#qr img");
-  const form = document.getElementById("vcardForm");
-  const formData = new FormData(form);
-
-  const firstName = formData.get("firstName") || "";
-  const lastName = formData.get("lastName") || "";
-  const email = formData.get("email") || "";
-  const phone = formData.get("phone") || "";
-  const mobile = formData.get("mobile") || "";
-  const website = formData.get("website") || "";
-  const company = formData.get("company") || "";
-  const position = formData.get("position") || "";
-  const address = formData.get("address") || "";
-  const postalCode = formData.get("postalCode") || "";
-  const city = formData.get("city") || "";
-
-// Réinitialisation du formulaire
-document.getElementById("clearForm").addEventListener("click", () => {
-  const form = document.getElementById("vcardForm");
-  form.reset();
-  const QR = document.getElementById("qr");
-  QR.innerHTML = "";
-});
-})
+  

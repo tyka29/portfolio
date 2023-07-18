@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "express": "^4.18.2",
-    "qrcode": "^1.5.3"
+    "qrcode": "^1.5.3",
+    "qrious": "^4.0.2"
   },
   "name": "tyka",
   "description": "",
@@ -19,6 +20,5 @@
   "bugs": {
     "url": "https://github.com/tyka29/tyka/issues"
   },
-  "homepage": "https://github.com/tyka29/tyka#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/tyka29/tyka#readme"
 }

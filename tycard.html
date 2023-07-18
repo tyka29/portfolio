@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ca7dc39334.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js" defer></script>
-    <script src="js/qrcode.js" defer></script>
     
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/menu.css">
@@ -15,143 +14,139 @@
     <title>TY'Card | La carte de visite sans contact</title>
 </head>
 <body>
-    <header>
-        <nav>
-          <div class="logo">
-            <a href="index.html"><img src="img/logo.webp" alt=""></a>
-          </div>
-          <ul class="menu">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="contact.html">Me contacter</a></li>
-          </ul>
-        </nav>
-    </header>
-
-    <main>
-      <h1>Ma Carte de Visite</h1>
-      <p>La carte NFC offre une expérience utilisateur unique en permettant aux personnes de scanner simplement la carte avec leur smartphone compatible NFC. Une fois scannée, la carte NFC peut transférer instantanément mes coordonnées professionnelles.</p>
-      <p>Cela facilite l'établissement de nouveaux contacts professionnels et garantit que vous disposez toujours de mes coordonnées à portée de main.</p>
-        
-      <div class="cardqrcode">
-        <div class="card">
-          <div class="card-name">
-              <h2 class="name">John Doe</h2>
-              <p class="contact-info">Tél: 123-456-789</p>
-              <p class="contact-info email">Email: john@example.com</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-detail">
-              <img class="qr-image" src="img/git.webp" alt="QR Code">
-              <div class="slogan"><p>phrase d'accroche</p></div>
-          </div>
-        </div>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.webp" alt=""></a>
       </div>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="contact.html">Me contacter</a></li>
+      </ul>
+    </nav>
+</header>
 
-      <div class="avantage">
-        <h3 class="sans-contact">Une carte sans contact</h3>
-        <p>Une carte de visite NFC intègre une puce NFC qui permet aux utilisateurs de partager instantanément leurs coordonnées et leurs informations professionnelles en un simple contact avec un smartphone compatible NFC.</p>
-        <h3 class="sans-application">Simplifiez vos échanges professionnels et impressionnez vos contacts</h3>
-        <p>Cette technologie sans fil permet d'établir une connexion rapide et sécurisée entre la carte de visite et le smartphone, éliminant ainsi le besoin de saisir manuellement les informations de contact. Il suffit de rapprocher le téléphone de la carte de visite pour que les données soient transférées automatiquement.</p>
-        <p>Avec une carte de visite NFC, vous restez à la pointe de la technologie et vous vous démarquez de vos concurrents. Vous montrez votre engagement envers l'innovation et vous facilitez les échanges professionnels pour vous et vos contacts.</p>
-        <p>Contactez-nous dès aujourd'hui pour obtenir votre carte de visite NFC personnalisée et impressionnez vos contacts avec cette solution pratique et moderne. Simplifiez votre réseau professionnel avec une carte de visite qui fait la différence.</p>
-      </div>
-
-      <div class="qrcode-container">
-        <h2 class="title">Générateur de QR code pour vCard <span>(Seule l'adresse e-mail est obligatoire)</span></h2>
-        <form
-  id="vcardForm"
-  action="https://formspree.io/f/mdorkkjw"
-  method="POST"
->
-  <div class="form-group">
-    <label for="firstName">First Name:</label>
-    <input type="text" id="firstName" name="firstName" >
-  </div>
-  <div class="form-group">
-    <label for="lastName">Last Name:</label>
-    <input type="text" id="lastName" name="lastName" >
-  </div>
-  <div class="form-group">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-  </div>
-  <div class="form-group">
-    <label for="phone">Phone:</label>
-    <input type="tel" id="phone" name="phone" >
-  </div>
-  <div class="form-group">
-    <label for="mobile">Mobile:</label>
-    <input type="tel" id="mobile" name="mobile" >
-  </div>
-  <div class="form-group">
-    <label for="website">Website:</label>
-    <input type="url" id="website" name="website" >
-  </div>
-  <div class="form-group">
-    <label for="company">Company:</label>
-    <input type="text" id="company" name="company" >
-  </div>
-  <div class="form-group">
-    <label for="position">Position:</label>
-    <input type="text" id="position" name="position" >
-  </div>
-  <div class="form-group">
-    <label for="address">Address:</label>
-    <input type="text" id="address" name="address" >
-  </div>
-  <div class="form-group">
-    <label for="postalCode">Postal Code:</label>
-    <input type="text" id="postalCode" name="postalCode" >
-  </div>
-  <div class="form-group">
-    <label for="city">City:</label>
-    <input type="text" id="city" name="city" >
-  </div>
-  <button type="submit" class="button__generate" id="generateQR">GENERATE</button>
-  <button type="button" class="button__clear" id="clearForm">CLEAR</button>
-  <button type="button" id="sendEmailButton" class="button__email">SEND EMAIL</button>
-</form>
-<div class="qr" id="qr"></div>
-      <div class="avantage">
-        <h3 class="sans-contact">Une carte sans contact</h3>
-        <p>Une carte de visite NFC intègre une puce NFC qui permet aux utilisateurs de partager instantanément leurs coordonnées et leurs informations professionnelles en un simple contact avec un smartphone compatible NFC.</p>
-        <h3 class="sans-application">Simplifiez vos échanges professionnels et impressionnez vos contacts</h3>
-        <p>Cette technologie sans fil permet d'établir une connexion rapide et sécurisée entre la carte de visite et le smartphone, éliminant ainsi le besoin de saisir manuellement les informations de contact. Il suffit de rapprocher le téléphone de la carte de visite pour que les données soient transférées automatiquement.</p>
-        <p>Avec une carte de visite NFC, vous restez à la pointe de la technologie et vous vous démarquez de vos concurrents. Vous montrez votre engagement envers l'innovation et vous facilitez les échanges professionnels pour vous et vos contacts.</p>
-        <p>Contactez-nous dès aujourd'hui pour obtenir votre carte de visite NFC personnalisée et impressionnez vos contacts avec cette solution pratique et moderne. Simplifiez votre réseau professionnel avec une carte de visite qui fait la différence.</p>
-      </div>
-
+<main>
+  <h1>Ma Carte de Visite</h1>
+  <p>La carte NFC offre une expérience utilisateur unique en permettant aux personnes de scanner simplement la carte avec leur smartphone compatible NFC. Une fois scannée, la carte NFC peut transférer instantanément mes coordonnées professionnelles.</p>
+  <p>Cela facilite l'établissement de nouveaux contacts professionnels et garantit que vous disposez toujours de mes coordonnées à portée de main.</p>
     
-      
-    </main>
+  <div class="cardqrcode">
+    <div class="card">
+      <div class="card-name">
+          <h2 class="name">John Doe</h2>
+          <p class="contact-info">Tél: 123-456-789</p>
+          <p class="contact-info">Email: john@example.com</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-detail">
+          <img class="qr-image" src="img/git.webp" alt="QR Code">
+          <div class="slogan"><p>phrase d'accroche</p></div>
+      </div>
+    </div>
+  </div>
 
-    <footer class="footer">
-        <div class="links">
-            <ul>
-                <li><a href="project.html">Mes projets</a></li>
-                <li><a href="contact.html">Contactez-moi</a></li>
-                <li><a href="boutique.html">Supports de communication</a></li>
-                <li>
-                    <a href="https://facebook.com/tykadesign">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/mikl291">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-            </ul>
-            <p class="text-center">
-                &copy; TYKA
-                <script>
-                    document.write(new Date().getFullYear());
-                </script>
-                - Tous droits réservés.
-            </p>
+  <div class="avantage">
+    <h3 class="sans-contact">Une carte sans contact</h3>
+    <p>Une carte de visite NFC intègre une puce NFC qui permet aux utilisateurs de partager instantanément leurs coordonnées et leurs informations professionnelles en un simple contact avec un smartphone compatible NFC.</p>
+    <h3 class="sans-application">Simplifiez vos échanges professionnels et impressionnez vos contacts</h3>
+    
+    <p>Cette technologie sans fil permet d'établir une connexion rapide et sécurisée entre la carte de visite et le smartphone, éliminant ainsi le besoin de saisir manuellement les informations de contact. Il suffit de rapprocher le téléphone de la carte de visite pour que les données soient transférées automatiquement.</p>
+    <p>Avec une carte de visite NFC, vous restez à la pointe de la technologie et vous vous démarquez de vos concurrents. Vous montrez votre engagement envers l'innovation et vous facilitez les échanges professionnels pour vous et vos contacts.</p>
+    <p>Contactez-nous dès aujourd'hui pour obtenir votre carte de visite NFC personnalisée et impressionnez vos contacts avec cette solution pratique et moderne. Simplifiez votre réseau professionnel avec une carte de visite qui fait la différence.</p>
+  </div>
+
+  <h2 class="title">Générateur de QR code pour vCard</h2>
+  <div class="qrcode-container">
+    <div class="corps">
+        <div class="formulaire" name="formulaire">
+            <form  method="POST" name="form1">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" class="form-control" oninput="change(this)" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" class="form-control" oninput="change(this)" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" oninput="change(this)" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" oninput="change(this)" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile:</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" oninput="change(this)" required>
+                </div>
+                <div class="form-group">
+                    <label for="website">Website:</label>
+                    <input type="url" id="website" name="website" class="form-control" oninput="change(this)" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company" class="form-control" oninput="change(this)" required>
+                </div>
+                <div class="form-group">
+                    <label for="position">Position:</label>
+                    <input type="text" id="position" name="position" class="form-control" oninput="change(this)" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" class="form-control" oninput="change(this)" required>
+                </div>
+                <div class="form-group">
+                    <label for="postalCode">Postal Code:</label>
+                    <input type="text" id="postalCode" name="postalCode" class="form-control" oninput="change(this)" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" class="form-control" oninput="change(this)" required>
+                </div>
+              </form>
+              <!-- on commence a partir d'ici -->
+              <div class="code_qr">
+                <img class="qrious">
+                <div class="information"></div>
+              </div>
+              
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+        <button id="shareButton" onclick="shareByEmail()">Partager</button>
 
+</main>
+<footer class="footer">
+  <div class="links">
+      <ul>
+          <li><a href="project.html">Mes projets</a></li>
+          <li><a href="contact.html">Contactez-moi</a></li>
+          <li><a href="boutique.html">Supports de communication</a></li>
+          <li>
+              <a href="https://facebook.com/tykadesign">
+                  <i class="fa-brands fa-facebook"></i>
+              </a>
+          </li>
+          <li>
+              <a href="https://github.com/mikl291">
+                  <i class="fa-brands fa-github"></i>
+              </a>
+          </li>
+      </ul>
+      <p class="text-center">
+          &copy; TYKA
+          <script>
+              document.write(new Date().getFullYear());
+          </script>
+          - Tous droits réservés.
+      </p>
+  </div>
+</footer>
+    <script src="js/qrious.js"></script>
+    <script src="js/qrcode.js"></script>
 </body>
 </html>
