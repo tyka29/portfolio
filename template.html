@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personnalisation de la carte de visite</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/template.css">
+  <link rel="stylesheet" href="style/menu.css">
+  <link rel="stylesheet" href="style/loader.css">
+
+  
+  
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">Chargement en cours...</div>
+    <header>
+        <nav>
+          <div class="logo">
+            <a href="index.html"><img src="img/logo.webp" alt=""></a>
+          </div>
+          <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="contact.html">Me contacter</a></li>
+          </ul>
+        </nav>
+    </header>
+
+  <h1>Personnalisation de la carte de visite</h1>
+
+  <div class="templates">
+    <div class="template" id="template1">
+      <h2>Template 1 (Vertical)</h2>
+      <img src="img/cdv1.webp" alt="Template 1">
+      <button onclick="selectTemplate(1)">Sélectionner</button>
+    </div>
+
+    <div class="template" id="template2">
+      <h2>Template 2 (Horizontal)</h2>
+      <img src="img/cdvH.png" alt="Template 2">
+      <button onclick="selectTemplate(2)">Sélectionner</button>
+    </div>
+  </div>
+
+  <div class="customization" id="customization">
+    <h2>Personnalisation</h2>
+    <label for="name">Nom :</label>
+    <input type="text" id="name">
+
+    <label for="jobTitle">Titre :</label>
+    <input type="text" id="jobTitle">
+
+    <label for="email">Email :</label>
+    <input type="email" id="email">
+
+    <label for="phone">Téléphone :</label>
+    <input type="tel" id="phone">
+
+    <label for="fontFamily">Police :</label>
+    <select id="fontFamily">
+      <option value="Arial, sans-serif">Arial</option>
+      <option value="Verdana, sans-serif">Verdana</option>
+      <option value="Times New Roman, serif">Times New Roman</option>
+      <!-- Ajoutez plus de polices ici -->
+    </select>
+
+    <label for="textColor">Couleur du texte :</label>
+    <input type="color" id="textColor" value="#000000">
+
+    <label for="backgroundColor">Couleur de fond :</label>
+    <input type="color" id="backgroundColor" value="#ffffff">
+
+    <button onclick="generateCard()">Générer la carte</button>
+  </div>
+
+
+  <div class="card-preview" id="cardPreview">
+    <h2>Aperçu de la carte de visite</h2>
+    <div class="card-frame">
+      <div class="card" id="previewCard">
+        <!-- Le contenu de la carte sera généré ici -->
+      </div>
+    </div>
+    <div class="download-options">
+      <button onclick="downloadAsHTML()">Télécharger au format HTML</button>
+      <!-- Implémenter le téléchargement au format PDF ici -->
+    </div>
+  </div>
+
+  <script src="js/template.js"></script>
+  <script src="js/loader.js"></script>
+</body>
+</html>
