@@ -1,77 +1,69 @@
-main {
-  padding: 20px;
-}
-
-h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
 p {
   margin-bottom: 20px;
 }
 
-.cardqrcode {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.card {
-  background-color: #fff;
-  box-shadow: 0 2px 8px;
-  padding: 20px;
-  width: 385px;
-  height: 243px;
-  border-radius: 1rem;
-}
-
-.card-name h2 {
-  font-size: 24px;
-  margin-top: 10px;
-  margin-bottom: 8rem;
-}
-
-.contact-info {
-  font-size: 14px;
-  margin-bottom: 0px;
-}
-
-.card-detail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 1.5rem;
-}
-
-.qr-image {
-  width: 100px;
-  margin-bottom: 1.5rem;
-}
-.slogan {
-  margin-top: 1rem;
-}
 
 .avantage {
-  margin-bottom: 40px;
+  display: flex;
+  color: #000;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 10px 10px 20px black;
+  margin-bottom: 2rem;
+  background: linear-gradient(130deg, pink, purple);
+  border: 0.5px solid rgba(189,189,189);
+  backdrop-filter: blur(1.5px);
 }
 
-.avantage h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.content {
+  flex: 1;
+  padding-right: 20px;
 }
 
-.avantage p {
-  margin-bottom: 20px;
+.client-gif {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-.qrcode-container {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  margin-bottom: 40px;
+.client-gif img {
+  max-width: 100%;
+  height: auto;
+  animation: pulseGif 2s linear infinite;
+  box-shadow: 0px 0px 10px #8C177B;
+  border-radius: 50%;
+}
+
+@keyframes pulseGif {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-contact {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #a8015d; 
+  border-radius: 1rem; 
+  transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #f70289;
+}
+.btn-contact {
+  position: relative;
+  overflow: hidden;
 }
 
 .title {
@@ -79,33 +71,6 @@ p {
   margin-bottom: 20px;
 }
 
-.confiance {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.carousel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.carousel img {
-  width: 120px;
-  height: 80px;
-  object-fit: cover;
-  margin-right: 10px;
-}
-
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
 
 form {
   width: 100%;
@@ -145,7 +110,45 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Pied de page */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+.about-content {
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.about-image {
+  max-width: 400px;
+  margin-top: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .footer {
   background-color: #333;
   color: #fff;
