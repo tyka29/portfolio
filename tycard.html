@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/menu.css">
     <link rel="stylesheet" href="style/boutique.css">
     <link rel="stylesheet" href="style/qrcode.css">
+    <link rel="stylesheet" href="style/card.css">
     <title>TY'Card | La carte de visite sans contact</title>
 </head>
 <body>
@@ -27,37 +28,44 @@
 </header>
 
 <main>
-  <h1>Ma Carte de Visite</h1>
-  <p>La carte NFC offre une expérience utilisateur unique en permettant aux personnes de scanner simplement la carte avec leur smartphone compatible NFC. Une fois scannée, la carte NFC peut transférer instantanément mes coordonnées professionnelles.</p>
+  <div class="presentation">
+    <div class="presentation-title">
+  <h1>LA CARTE DE VISITE</h1>
+  <span>connectée personnalisable</span>
   <p>Cela facilite l'établissement de nouveaux contacts professionnels et garantit que vous disposez toujours de mes coordonnées à portée de main.</p>
-    
-  <div class="cardqrcode">
-    <div class="card">
-      <div class="card-name">
-          <h2 class="name">John Doe</h2>
-          <p class="contact-info">Tél: 123-456-789</p>
-          <p class="contact-info">Email: john@example.com</p>
+</div>
+</div>
+  <div class="contact">
+    <div class="buisness-card">
+      <div class="card">
+        <img src="img/cdv1.webp" alt="">
+      </div>
+      <div class="card">
+        <img src="img/cdv2.webp" alt="">
       </div>
     </div>
-    <div class="card">
-      <div class="card-detail">
-          <img class="qr-image" src="img/git.webp" alt="QR Code">
-          <div class="slogan"><p>phrase d'accroche</p></div>
+    </div>
+    
+    
+    <div class="avantage">
+      <div class="content">
+        <h2 class="sans-contact">Une carte sans contact</h2>
+        <p>Une carte de visite NFC intègre une puce NFC qui permet aux utilisateurs de partager instantanément leurs coordonnées et leurs informations professionnelles en un simple contact avec un smartphone compatible NFC.</p>
+        <h3 class="sans-application">Simplifiez vos échanges professionnels et impressionnez vos contacts</h3>
+        <p>Cette technologie sans fil permet d'établir une connexion rapide et sécurisée entre la carte de visite et le smartphone, éliminant ainsi le besoin de saisir manuellement les informations de contact. Il suffit de rapprocher le téléphone de la carte de visite pour que les données soient transférées automatiquement.</p>
+        <p>Avec une carte de visite NFC, vous restez à la pointe de la technologie et vous vous démarquez de vos concurrents. Vous montrez votre engagement envers l'innovation et vous facilitez les échanges professionnels pour vous et vos contacts.</p>
+        <p>Contactez-nous dès aujourd'hui pour obtenir votre carte de visite NFC personnalisée et impressionnez vos contacts avec cette solution pratique et moderne. Simplifiez votre réseau professionnel avec une carte de visite qui fait la différence.</p>
+        <a href="contact.html" class="btn-contact">Contact</a>
+        <a href="template.html" class="btn-contact">Personnaliser ma carte</a>
+      
+      </div>
+      <div class="client-gif">
+        <img src="img/tycard.gif" alt="Client GIF">
       </div>
     </div>
-  </div>
-
-  <div class="avantage">
-    <h3 class="sans-contact">Une carte sans contact</h3>
-    <p>Une carte de visite NFC intègre une puce NFC qui permet aux utilisateurs de partager instantanément leurs coordonnées et leurs informations professionnelles en un simple contact avec un smartphone compatible NFC.</p>
-    <h3 class="sans-application">Simplifiez vos échanges professionnels et impressionnez vos contacts</h3>
     
-    <p>Cette technologie sans fil permet d'établir une connexion rapide et sécurisée entre la carte de visite et le smartphone, éliminant ainsi le besoin de saisir manuellement les informations de contact. Il suffit de rapprocher le téléphone de la carte de visite pour que les données soient transférées automatiquement.</p>
-    <p>Avec une carte de visite NFC, vous restez à la pointe de la technologie et vous vous démarquez de vos concurrents. Vous montrez votre engagement envers l'innovation et vous facilitez les échanges professionnels pour vous et vos contacts.</p>
-    <p>Contactez-nous dès aujourd'hui pour obtenir votre carte de visite NFC personnalisée et impressionnez vos contacts avec cette solution pratique et moderne. Simplifiez votre réseau professionnel avec une carte de visite qui fait la différence.</p>
-  </div>
 
-  <h2 class="title">Générateur de QR code pour vCard</h2>
+  <h4 class="title">Générateur de QR code pour vCard</h4>
   <div class="qrcode-container">
     <div class="corps">
         <div class="formulaire" name="formulaire">
@@ -80,7 +88,7 @@
                 </div>
                 <div class="form-group">
                     <label for="mobile">Mobile:</label>
-                    <input type="tel" id="phone" name="phone" class="form-control" oninput="change(this)">
+                    <input type="tel" id="mobile" name="mobile" class="form-control" oninput="change(this)">
                 </div>
                 <div class="form-group">
                     <label for="website">Website:</label>
@@ -115,12 +123,55 @@
               
               </div>
             </div>
+            
+            <button class="shareButton" id="shareButton" onclick="shareByEmail()">Partager</button>        
           </div>
-        </div>
-        <button id="shareButton" onclick="shareByEmail()">Partager</button>
 
+          <section class="tuto">
+            <h3 class="tutoriel-title">Comment utiliser la carte de visite sans contact :</h3>
+
+              <p class="tutoriel-paragraph">
+                Pour créer votre carte de visite sans contact, il vous suffit de remplir le formulaire ci-dessus avec vos informations professionnelles. Assurez-vous de saisir correctement votre prénom, nom, adresse e-mail, numéro de téléphone, et d'autres détails importants pour les échanges professionnels.
+              </p>
+              <p class="tutoriel-paragraph">
+                Une fois que vous avez rempli le formulaire, cliquez sur le bouton "Partager" en bas de la page. Cela générera automatiquement un QR code contenant vos informations de contact au format vCard (format de carte de visite virtuelle). Vous pouvez voir le QR code généré dans la zone dédiée sur la droite de la page.
+              </p>
+              <p class="tutoriel-paragraph">
+                Pour partager vos informations de contact avec quelqu'un, il vous suffit de montrer le QR code généré sur votre écran. Le destinataire peut alors scanner le code à l'aide de la fonction de numérisation de QR code de son smartphone ou de tout autre appareil compatible NFC. En un simple contact, vos coordonnées seront instantanément transférées vers le téléphone du destinataire.
+              </p>
+              <p class="tutoriel-paragraph">
+                Avec la carte de visite sans contact, vous simplifiez vos échanges professionnels en évitant le besoin de distribuer physiquement des cartes de visite papier. C'est une solution pratique, moderne et respectueuse de l'environnement pour partager vos coordonnées professionnelles avec vos contacts.
+              </p>
+
+              <h1>Envoyer le QR code par e-mail</h1>
+  <form action="send_email.php" method="post">
+    <label for="recipient">Destinataire :</label>
+    <input type="email" id="recipient" name="recipient" required>
+
+    <label for="subject">Sujet :</label>
+    <input type="text" id="subject" name="subject" required>
+
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <input type="hidden" name="qrcode_data" value="">
+
+    <input type="submit" value="Envoyer le QR code par e-mail">
+  </form>
+          </section>
+        
+        
+        
 </main>
 <footer class="footer">
+  <section class="about">
+    <div class="about-content">
+      <h2>À propos de nous</h2>
+      <p>Nous sommes une équipe passionnée de professionnels du design et du développement web, dédiée à créer des solutions innovantes pour votre communication professionnelle.</p>
+      <p>Notre objectif est de vous aider à vous démarquer de la concurrence en vous offrant une carte de visite sans contact, moderne et personnalisée.</p>
+      <p>Nous croyons en l'importance de la technologie et de l'innovation pour faciliter les échanges professionnels et nous nous engageons à vous fournir un produit de haute qualité.</p>
+    </div>
+  </section>
   <div class="links">
       <ul>
           <li><a href="project.html">Mes projets</a></li>
@@ -148,5 +199,6 @@
 </footer>
     <script src="js/qrious.js"></script>
     <script src="js/qrcode.js"></script>
+    <script src="js/carte.js" defer></script>
 </body>
 </html>
