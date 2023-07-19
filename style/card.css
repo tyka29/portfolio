@@ -1,0 +1,98 @@
+.presentation {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 10px 20px 30px black;
+  margin-bottom: 2rem;
+  background: linear-gradient(130deg, pink, purple);
+  border: 0.5px solid rgba(189,189,189);
+  backdrop-filter: blur(1.5px);
+  width: 60%;
+}
+.presentation-title {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.presentation-title h1 {
+    margin: 1rem 1rem;
+}
+.presentation span {
+  margin: -1.5rem 1rem;
+}
+.presentation-title p {
+    margin: 2.5rem 1rem;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+}
+.buisness-card {
+    display: flex;
+}
+
+.buisness-card img {
+  width: 300px;
+}
+.card {
+    display: flex;
+    align-items: center;
+    
+}
+
+.contact {
+  display: flex;
+}
+
+.carousel-container {
+    position: relative;
+    width: 200px;
+    overflow: hidden;
+  }
+
+  .confiance {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .carousel-item {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    scroll-snap-align: start;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item.active {
+    filter: grayscale(0%);
+  }
+  
+  @keyframes scrollCarousel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-80px * 6)); /* -80px * number of items */
+    }
+  }
+  
