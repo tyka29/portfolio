@@ -4,18 +4,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/ca7dc39334.js" crossorigin="anonymous"></script>
   <title>Personnalisation de la carte de visite</title>
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/template.css">
   <link rel="stylesheet" href="style/menu.css">
   <link rel="stylesheet" href="style/loader.css">
-
-  
-  
 </head>
-<body>
-  <!-- Loader -->
-  <div id="loader">Chargement en cours...</div>
+<main>
+  <div class="loader-container">
+    <div class="loader"></div>
+  </div>
     <header>
         <nav>
           <div class="logo">
@@ -63,6 +62,15 @@
       <option value="Arial, sans-serif">Arial</option>
       <option value="Verdana, sans-serif">Verdana</option>
       <option value="Times New Roman, serif">Times New Roman</option>
+      <option value="Georgia, serif">Georgia</option>
+      <option value="Helvetica, sans-serif">Helvetica</option>
+      <option value="Courier New, monospace">Courier New</option>
+      <option value="Impact, sans-serif">Impact</option>
+      <option value="Palatino, serif">Palatino</option>
+      <option value="Tahoma, sans-serif">Tahoma</option>
+      <option value="Trebuchet MS, sans-serif">Trebuchet MS</option>
+      <option value="Comic Sans MS, cursive">Comic Sans MS</option>
+      <option value="Lucida Console, monospace">Lucida Console</option>
       <!-- Ajoutez plus de polices ici -->
     </select>
 
@@ -72,9 +80,24 @@
     <label for="backgroundColor">Couleur de fond :</label>
     <input type="color" id="backgroundColor" value="#ffffff">
 
+    <label for="boldText">Texte en gras :</label>
+    <input type="checkbox" id="boldText">
+
+    <label for="textAlignment">Alignement du texte :</label>
+    <select id="textAlignment">
+      <option value="left">Gauche</option>
+      <option value="center">Centre</option>
+      <option value="right">Droite</option>
+    </select>
+
+    <label for="singleLineContact">Afficher sur une seule ligne :</label>
+    <input type="checkbox" id="singleLineContact">
+
+    <label for="logo">Logo :</label>
+    <input type="file" id="logo" accept="image/*">
+
     <button onclick="generateCard()">Générer la carte</button>
   </div>
-
 
   <div class="card-preview" id="cardPreview">
     <h2>Aperçu de la carte de visite</h2>
@@ -88,8 +111,34 @@
       <!-- Implémenter le téléchargement au format PDF ici -->
     </div>
   </div>
-
-  <script src="js/template.js"></script>
-  <script src="js/loader.js"></script>
+</main>
+<footer class="footer">
+  <div class="links">
+      <ul>
+          <li><a href="project.html">Mes projets</a></li>
+          <li><a href="contact.html">Contactez-moi</a></li>
+      
+        <li>
+          <a href="https://facebook.com/tykadesign">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/mikl291">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="text-center">
+        &copy; TYKA
+        <script>
+            document.write(new Date().getFullYear());
+        </script>
+        - Tous droits réservés.
+    </p>
+      </ul>
+  </div>
+</footer>
+  <script src="js/template.js" defer></script>
 </body>
 </html>
