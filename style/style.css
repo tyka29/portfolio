@@ -11,12 +11,6 @@ body {
   text-transform: none;
 }
 
-header {
-  box-shadow: 0 -1px 8px #8C177B;
-  padding: 20px;
-  margin-bottom: 2rem;
-}
-
 
 nav {
   display: flex;
@@ -40,14 +34,16 @@ nav {
 main h2, h3, h4 {
   margin-top: 2rem;
 }
+form, section {
+  width: 95%;
+}
 #form {
   display: block;
   background-image: url("../img/responsive.webp");
-  background-size: 20%; ;
+  background-size: 40%; ;
   background-repeat: no-repeat;
   background-position: center;
-  height: 230px;
-  margin-right: -40px;
+  height: 300px;
 }
 
 .search-box {
@@ -82,112 +78,7 @@ main h2, h3, h4 {
   background-color: #d412bb;
 }
 
-.thumbnails {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 1rem;
-  background-color: #d3d3d3;
-  border-radius: 10px;
-padding: 20px;
-}
 
-.project-thumbnail {
-  width: 300px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  text-align: center;
-  margin: 10px;
-}
-
-.project-thumbnail img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-}
-
-.project-thumbnail h3, p {
-  font-size: 18px;
-  margin-bottom: 1rem;
-}
-.project-thumbnail span {
-  text-decoration: underline;
-}
-
-.project-thumbnail a {
-  display: flex;
-    padding: 10px 0px;
-    background-color: #8A187B;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 0.3rem;
-    font-weight: bold;
-    flex-direction: column;
-    margin-top: 1rem;
-    width: 50%;
-}
-.project-thumbnail a:hover{
-  background-color: #5a034e;
-}
-
-.thumbnails-perso {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #d3d3d3;
-  border-radius: 10px;
-  margin-top: 1rem;
-}
-
-.perso-thumbnail {
-  width: 300px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  text-align: center;
-  margin: 10px;
-}
-
-.perso-thumbnail img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 1rem;
-  margin-bottom: 10px;
-}
-
-.perso-thumbnail h1 {
-  font-size: 18px;
-  margin-bottom: 1rem;
-}
-
-.perso-thumbnail p {
-  font-size: 14px;
-  margin-bottom: 10px;
-  text-decoration: none;
-}
-.perso-thumbnail span {
-  text-decoration: underline;
-}
-
-.perso-thumbnail a {
-  display: flex;
-  padding: 10px 0px;
-  background-color: #8A187B;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 0.3rem;
-  font-weight: bold;
-  flex-direction: column;
-  margin-top: 1rem;
-  width: 50%;
-}
-.perso-thumbnail a:hover{
-  background-color: #5a034e;
-}
 
 #contact {
   margin: 5rem auto;
@@ -255,51 +146,6 @@ padding: 20px;
   background-color: #8A187B;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  margin-top: 3rem;
-}
-
-.footer ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.footer ul li {
-  margin-right: 20px;
-}
-
-.footer ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-.footer i {
-  font-size: 25px;
-}
-.fa-facebook:hover{
-  color: #4267B2;
-}
-.fa-github:hover {
-  color: black;
-}
-
-.footer .text-center {
-  font-size: 10px;
-}
-
-footer .social {
-  display: flex;
-}
 
 /* Media Queries */
 
@@ -308,15 +154,6 @@ footer .social {
     max-width: 95%;
     display: flex;
     flex-direction: column;
-  }
-
-  header {
-    padding: 10px;
-    flex-direction: column;
-  }
-  ul{
-    position: relative;
-    bottom: 100%;
   }
 
   .logo img {
@@ -407,63 +244,9 @@ footer .social {
     margin-bottom: 2rem;
     margin: 0 auto;
   }
-  .footer {
-    display: flex;
-    flex-direction: column;
-  }
-  .links {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-  }
-  .footer ul li a {
-    font-size: 16px;
-  }
-  .footer .text-center {
-    font-size: 10px;
-  }
 }
 
 @media screen and (max-width: 768px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-  }
-  nav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: white;
-  }
-  .logo {
-    margin: 0 auto
-  }
-  .menu {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  .menu li {
-    margin: 10px 0;
-    border: 2px solid;
-    padding: 1rem;
-    border-radius: 1rem;
-    text-align: center;
-    font-weight: bold;
-    width: 100%;
-  }
-  .menu li a {
-    color: white;
-  }
-
-  #form {
-    display: block;
-    margin: 1rem auto;
-  }
-
   .fa-solid .fa-message {
     display: flex;
     justify-content: center;
@@ -562,8 +345,5 @@ footer .social {
     font-size: 12px;
   }
   
-  .footer ul li a {
-    font-size: 13px;
-  }
 
 }

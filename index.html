@@ -1,28 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Tyka Web Design offre des services de développement web personnalisés pour les entreprises, avec une expertise dans la conception de sites web modernes et conviviaux. Contactez-nous pour des solutions web sur mesure.">
-        <script src="https://kit.fontawesome.com/ca7dc39334.js" crossorigin="anonymous"></script>
-        <title>Tyka Web Design | Services de développement web sur mesure</title>
-        <link rel="stylesheet" href="style/style.css">
-        <link rel="stylesheet" href="style/menu.css">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class="logo">
-                    <a href="index.html"><img src="img/logo.webp" alt="Logo Tyka Web Design"></a>
-                </div>
-                <ul class="menu">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="contact.html">Me contacter</a></li>
-                    <li><a href="tycard.html">Les produits</a></li>
-                </ul>
-            </nav>
-        </header>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/ca7dc39334.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/menu.css">
+  <link rel="stylesheet" href="style/footer.css">
+  <link rel="stylesheet" href="style/thumbnails.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ6W1MP7XR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DZ6W1MP7XR');
+  </script>
+
+  <title>Tyka web design</title>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.webp" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="tycard.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="project.html">Les projets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contactez-moi</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
     
         <main>
             <form action="#" id="form">
@@ -39,7 +62,7 @@
             </section>
     
             <section class="perso-thumbnails">
-                <h2>Projets réalisés par mes soins :</h2>
+                <h2>Projets de communication visuelle:</h2>
                 <div class="thumbnails-perso"></div>
             </section>
     
@@ -82,5 +105,9 @@
         <script src="js/script.js" defer></script>
         <script src="js/perso.js" defer></script>
         <script src="js/mail.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
     </body>
     </html>

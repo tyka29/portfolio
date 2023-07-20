@@ -8,13 +8,13 @@ body {
   h1 {
     font-size: 36px;
     margin-bottom: 30px;
-    color: #1a73e8;
     padding: 20px;
   }
   
   h2 {
     font-size: 24px;
     margin-bottom: 15px;
+    color: blue;
   }
   
   h3 {
@@ -119,7 +119,6 @@ body {
   .card-preview h2 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #1a73e8;
   }
   
   .card {

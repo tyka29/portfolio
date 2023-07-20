@@ -1,204 +1,147 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/ca7dc39334.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js" defer></script>
-    
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/menu.css">
-    <link rel="stylesheet" href="style/boutique.css">
-    <link rel="stylesheet" href="style/qrcode.css">
-    <link rel="stylesheet" href="style/card.css">
-    <title>TY'Card | La carte de visite sans contact</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tyka web design</title>
+  <!-- Add a favicon -->
+  <link rel="icon" href="path/to/favicon.ico">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/menu.css">
+  <link rel="stylesheet" href="style/footer.css">
+  <link rel="stylesheet" href="style/card.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">
-        <a href="index.html"><img src="img/logo.webp" alt=""></a>
-      </div>
-      <ul class="menu">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="contact.html">Me contacter</a></li>
-      </ul>
-    </nav>
-</header>
 
-<main>
-  <div class="presentation">
-    <div class="presentation-title">
-  <h1>LA CARTE DE VISITE</h1>
-  <span>connectée personnalisable</span>
-  <p>Cela facilite l'établissement de nouveaux contacts professionnels et garantit que vous disposez toujours de mes coordonnées à portée de main.</p>
-</div>
-</div>
-  <div class="contact">
-    <div class="buisness-card">
-      <div class="card">
-        <img src="img/cdv1.webp" alt="">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.webp" alt="Tyka Web Design"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="tycard.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="project.html">Les projets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contactez-moi</a>
+          </li>
+        </ul>
       </div>
-      <div class="card">
-        <img src="img/cdv2.webp" alt="">
+    </nav>
+  </header>
+
+  <main>
+    <div class="presentation">
+      <div class="presentation-title">
+        <h1>LA CARTE DE VISITE</h1>
+        <span>connectée personnalisable</span>
+        <p>Cela facilite l'établissement de nouveaux contacts professionnels et garantit que vous disposez toujours de mes coordonnées à portée de main.</p>
       </div>
     </div>
-    </div>
-    
-    
-    <div class="avantage">
+
+    <!-- Use semantic HTML for better accessibility -->
+    <section class="contact">
+      <div class="buisness-card">
+        <div class="card">
+          <img src="img/cdv1.webp" alt="Card 1">
+        </div>
+        <div class="card">
+          <img src="img/client.gif" alt="Card 1">
+        </div>
+        <div class="card">
+          <img src="img/cdv2.webp" alt="Card 2">
+        </div>
+      </div>
+    </section>
+
+    <section class="avantage">
       <div class="content">
         <h2 class="sans-contact">Une carte sans contact</h2>
         <p>Une carte de visite NFC intègre une puce NFC qui permet aux utilisateurs de partager instantanément leurs coordonnées et leurs informations professionnelles en un simple contact avec un smartphone compatible NFC.</p>
         <h3 class="sans-application">Simplifiez vos échanges professionnels et impressionnez vos contacts</h3>
-        <p>Cette technologie sans fil permet d'établir une connexion rapide et sécurisée entre la carte de visite et le smartphone, éliminant ainsi le besoin de saisir manuellement les informations de contact. Il suffit de rapprocher le téléphone de la carte de visite pour que les données soient transférées automatiquement.</p>
-        <p>Avec une carte de visite NFC, vous restez à la pointe de la technologie et vous vous démarquez de vos concurrents. Vous montrez votre engagement envers l'innovation et vous facilitez les échanges professionnels pour vous et vos contacts.</p>
+        <!-- Add <ul> for better organization of features list -->
+        <ul>
+          <li>Cette technologie sans fil permet d'établir une connexion rapide et sécurisée entre la carte de visite et le smartphone, éliminant ainsi le besoin de saisir manuellement les informations de contact. Pour partager vos informations de contact avec quelqu'un, il vous suffit de montrer le QR code généré sur votre écran.</li>
+          <li>Le destinataire peut alors scanner le code à l'aide de la fonction de numérisation de QR code de son smartphone ou de tout autre appareil compatible NFC. En un simple contact, vos coordonnées seront instantanément transférées vers le téléphone du destinataire.</li>
+          <li>Avec une carte de visite NFC, vous restez à la pointe de la technologie et vous vous démarquez de vos concurrents. Vous montrez votre engagement envers l'innovation et vous facilitez les échanges professionnels pour vous et vos contacts.</li>
+        </ul>
         <p>Contactez-nous dès aujourd'hui pour obtenir votre carte de visite NFC personnalisée et impressionnez vos contacts avec cette solution pratique et moderne. Simplifiez votre réseau professionnel avec une carte de visite qui fait la différence.</p>
         <a href="contact.html" class="btn-contact">Contact</a>
         <a href="template.html" class="btn-contact">Personnaliser ma carte</a>
-      
       </div>
       <div class="client-gif">
         <img src="img/tycard.gif" alt="Client GIF">
       </div>
-    </div>
-    
+    </section>
 
-  <h4 class="title">Générateur de QR code pour vCard</h4>
-  <div class="qrcode-container">
-    <div class="corps">
-        <div class="formulaire" name="formulaire">
-            <form  method="POST" name="form1">
-                <div class="form-group">
-                    <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName" class="form-control" oninput="change(this)">
-                </div>
-                <div class="form-group">
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" name="lastName" class="form-control" oninput="change(this)">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" class="form-control" oninput="change(this)" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone" class="form-control" oninput="change(this)">
-                </div>
-                <div class="form-group">
-                    <label for="mobile">Mobile:</label>
-                    <input type="tel" id="mobile" name="mobile" class="form-control" oninput="change(this)">
-                </div>
-                <div class="form-group">
-                    <label for="website">Website:</label>
-                    <input type="url" id="website" name="website" class="form-control" oninput="change(this)">
-                </div>
-                <div class="form-group">
-                    <label for="company">Company:</label>
-                    <input type="text" id="company" name="company" class="form-control" oninput="change(this)">
-                </div>
-                <div class="form-group">
-                    <label for="position">Position:</label>
-                    <input type="text" id="position" name="position" class="form-control" oninput="change(this)">
-                </div>
-                <div class="form-group">
-                    <label for="address">Address:</label>
-                    <input type="text" id="address" name="address" class="form-control" oninput="change(this)">
-                </div>
-                <div class="form-group">
-                    <label for="postalCode">Postal Code:</label>
-                    <input type="text" id="postalCode" name="postalCode" class="form-control" oninput="change(this)">
-                </div>
-                <div class="form-group">
-                    <label for="city">City:</label>
-                    <input type="text" id="city" name="city" class="form-control" oninput="change(this)">
-                </div>
-              </form>
-              <!-- on commence a partir d'ici -->
-              <div class="code_qr">
-                <img class="qrious">
-                <div class="information"></div>
-              </div>
-              
-              </div>
-            </div>
-            
-            <button class="shareButton" id="shareButton" onclick="shareByEmail()">Partager</button>        
-          </div>
+    <section class="details">
+      <h2>Les Fonctionnalités Avancées des Cartes de Visite NFC</h2>
+      <div class="details-text">
+        <!-- Improve content organization and readability -->
+        <p>Les cartes de visite NFC offrent bien plus qu'une simple présentation de vos coordonnées. Grâce à leur technologie avancée, ces cartes intelligentes révolutionnent la manière dont nous établissons des contacts professionnels et interagissons avec notre réseau. En un simple geste, vous pouvez partager vos informations de contact complètes avec vos partenaires commerciaux ou prospects, simplifiant ainsi le processus de mise en relation.</p>
+        <p>Cependant, ce n'est pas tout ! Les possibilités offertes par les cartes de visite NFC vont bien au-delà. Vous pouvez désormais inclure des liens vers des sites Web, des profils sociaux et même des vidéos de marque. Imaginez pouvoir diriger instantanément vos contacts vers votre site Web professionnel, une démonstration produit captivante ou une vidéo promotionnelle engageante. Cette capacité à communiquer de manière interactive et visuelle vous permet de laisser une impression durable sur votre audience.</p>
+        <p>Les cartes de visite NFC deviennent également un outil marketing puissant. Grâce à leur espace de stockage supplémentaire, vous pouvez y intégrer des invitations personnalisées à des événements spéciaux, des remises exclusives et des promotions temporaires. En faisant de vos cartes de visite NFC un support de communication dynamique, vous créez une expérience unique pour vos contacts et vous démarquez de la concurrence.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Partager instantanément vos coordonnées professionnelles avec un simple contact.</li>
+          <li><i class="fas fa-check"></i> Intégrer un lien vers votre site Web professionnel pour une présentation complète de vos services.</li>
+          <li><i class="fas fa-check"></i> Inclure des liens vers vos profils sociaux (LinkedIn, Twitter, etc.) pour faciliter le réseautage.</li>
+          <li><i class="fas fa-check"></i> Ajouter une vidéo de présentation captivante pour impressionner vos contacts.</li>
+          <li><i class="fas fa-check"></i> Offrir une carte de visite interactive avec des liens vers des documents PDF ou des brochures.</li>
+          <li><i class="fas fa-check"></i> Proposer des remises exclusives ou des promotions spéciales pour vos prospects.</li>
+          <li><i class="fas fa-check"></i> Envoyer des invitations personnalisées à des événements professionnels que vous organisez.</li>
+          <li><i class="fas fa-check"></i> Partager une démonstration produit détaillée pour susciter l'intérêt de vos clients potentiels.</li>
+        </ul>
+        <p>En somme, les cartes de visite NFC transforment la manière dont nous établissons des relations professionnelles. En offrant des fonctionnalités avancées telles que le partage de liens, les vidéos de marque et les campagnes marketing interactives, ces cartes intelligentes s'imposent comme un outil essentiel pour tout professionnel souhaitant se démarquer, promouvoir efficacement son entreprise et créer des opportunités commerciales prometteuses. Ne manquez pas l'occasion de tirer parti de cette technologie innovante pour renforcer votre réseau professionnel et augmenter votre visibilité sur le marché.</p>
+      </div>
+    </section>
+  </main>
 
-          <section class="tuto">
-            <h3 class="tutoriel-title">Comment utiliser la carte de visite sans contact :</h3>
-
-              <p class="tutoriel-paragraph">
-                Pour créer votre carte de visite sans contact, il vous suffit de remplir le formulaire ci-dessus avec vos informations professionnelles. Assurez-vous de saisir correctement votre prénom, nom, adresse e-mail, numéro de téléphone, et d'autres détails importants pour les échanges professionnels.
-              </p>
-              <p class="tutoriel-paragraph">
-                Une fois que vous avez rempli le formulaire, cliquez sur le bouton "Partager" en bas de la page. Cela générera automatiquement un QR code contenant vos informations de contact au format vCard (format de carte de visite virtuelle). Vous pouvez voir le QR code généré dans la zone dédiée sur la droite de la page.
-              </p>
-              <p class="tutoriel-paragraph">
-                Pour partager vos informations de contact avec quelqu'un, il vous suffit de montrer le QR code généré sur votre écran. Le destinataire peut alors scanner le code à l'aide de la fonction de numérisation de QR code de son smartphone ou de tout autre appareil compatible NFC. En un simple contact, vos coordonnées seront instantanément transférées vers le téléphone du destinataire.
-              </p>
-              <p class="tutoriel-paragraph">
-                Avec la carte de visite sans contact, vous simplifiez vos échanges professionnels en évitant le besoin de distribuer physiquement des cartes de visite papier. C'est une solution pratique, moderne et respectueuse de l'environnement pour partager vos coordonnées professionnelles avec vos contacts.
-              </p>
-
-              <h1>Envoyer le QR code par e-mail</h1>
-  <form action="send_email.php" method="post">
-    <label for="recipient">Destinataire :</label>
-    <input type="email" id="recipient" name="recipient" required>
-
-    <label for="subject">Sujet :</label>
-    <input type="text" id="subject" name="subject" required>
-
-    <label for="message">Message :</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
-
-    <input type="hidden" name="qrcode_data" value="">
-
-    <input type="submit" value="Envoyer le QR code par e-mail">
-  </form>
-          </section>
-        
-        
-        
-</main>
-<footer class="footer">
-  <section class="about">
-    <div class="about-content">
-      <h2>À propos de nous</h2>
-      <p>Nous sommes une équipe passionnée de professionnels du design et du développement web, dédiée à créer des solutions innovantes pour votre communication professionnelle.</p>
-      <p>Notre objectif est de vous aider à vous démarquer de la concurrence en vous offrant une carte de visite sans contact, moderne et personnalisée.</p>
-      <p>Nous croyons en l'importance de la technologie et de l'innovation pour faciliter les échanges professionnels et nous nous engageons à vous fournir un produit de haute qualité.</p>
-    </div>
-  </section>
-  <div class="links">
+  <footer class="footer">
+    <section class="about">
+      <div class="about-content">
+        <h2>À propos de nous</h2>
+        <p>Nous sommes une équipe passionnée de professionnels du design et du développement web, dédiée à créer des solutions innovantes pour votre communication professionnelle.</p>
+        <p>Notre objectif est de vous aider à vous démarquer de la concurrence en vous offrant une carte de visite sans contact, moderne et personnalisée.</p>
+        <p>Nous croyons en l'importance de la technologie et de l'innovation pour faciliter les échanges professionnels et nous nous engageons à vous fournir un produit de haute qualité.</p>
+      </div>
+    </section>
+    <div class="links">
       <ul>
-          <li><a href="project.html">Mes projets</a></li>
-          <li><a href="contact.html">Contactez-moi</a></li>
-          <li><a href="boutique.html">Supports de communication</a></li>
-          <li>
-              <a href="https://facebook.com/tykadesign">
-                  <i class="fa-brands fa-facebook"></i>
-              </a>
-          </li>
-          <li>
-              <a href="https://github.com/mikl291">
-                  <i class="fa-brands fa-github"></i>
-              </a>
-          </li>
+        <li><a href="project.html">Mes projets</a></li>
+        <li><a href="contact.html">Contactez-moi</a></li>
+        <li><a href="tycard.html">Supports de communication</a></li>
+        <li>
+          <a href="https://facebook.com/tykadesign" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/mikl291" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
       </ul>
       <p class="text-center">
-          &copy; TYKA
-          <script>
-              document.write(new Date().getFullYear());
-          </script>
-          - Tous droits réservés.
+        &copy; TYKA
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        - Tous droits réservés.
       </p>
-  </div>
-</footer>
-    <script src="js/qrious.js"></script>
-    <script src="js/qrcode.js"></script>
-    <script src="js/carte.js" defer></script>
+    </div>
+  </footer>
+
+  <script src="js/qrious.js"></script>
+  <script src="js/qrcode.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

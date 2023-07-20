@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   color: #fff;
+  font-size: 18px;
   padding: 20px;
   border-radius: 30px;
   box-shadow: 10px 20px 30px black;
@@ -18,12 +19,15 @@
 }
 .presentation-title h1 {
     margin: 1rem 1rem;
+    font-size: 22px;
 }
 .presentation span {
   margin: -1.5rem 1rem;
+  font-size: 16px;
 }
 .presentation-title p {
     margin: 2.5rem 1rem;
+    font-size: 18px;
 }
 
 .contact {
@@ -38,8 +42,12 @@
   width: 300px;
 }
 .card {
+  margin-top: 2rem;
+  background: none !important ;
+  border: none!important;
     display: flex;
     align-items: center;
+    justify-content: center;
     
 }
 
@@ -96,3 +104,215 @@
     }
   }
   
+p {
+  margin: 1rem 0rem;
+  color: white;
+}
+
+
+.avantage {
+  display: flex;
+  color: #000;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 10px 10px 20px black;
+  margin-bottom: 2rem;
+  background: linear-gradient(130deg, pink, purple);
+  border: 0.5px solid rgba(189,189,189);
+  backdrop-filter: blur(1.5px);
+  width: 90%;
+  align-items: center;
+}
+
+.content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.client-gif {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.client-gif img {
+  max-width: 100%;
+  height: auto;
+  animation: pulseGif 2s linear infinite;
+  box-shadow: 0px 0px 10px #8C177B;
+  border-radius: 50%;
+}
+
+@keyframes pulseGif {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-contact {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #a8015d; 
+  border-radius: 1rem; 
+  transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #f70289;
+  text-decoration: none;
+  color: white!important;
+}
+.btn-contact {
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+
+form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.details {
+  margin: 0 2rem;
+}
+
+.details h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+}
+
+.details-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.details p {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  color: #000000;
+  margin-top: 1rem;
+  width: 100%;
+  transition: opacity 2s;
+}
+
+/* Styles pour les écrans de taille inférieure à 758px (p. ex., appareils mobiles) */
+@media screen and (max-width: 757px) {
+  .presentation {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .presentation-title h1 {
+      font-size: 18px;
+    }
+  .presentation-title span {
+      font-size: 14px;
+    }
+   
+  .presentation-title p {  
+    font-size: 12px;
+    }
+  
+
+  .buisness-card {
+    display: none;
+  }
+
+  .avantage {
+    padding: 20px;
+    width: 95%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    padding-right: 0;
+  }
+
+  .client-gif {
+    justify-content: flex-start;
+  }
+  .client-gif img {
+    width: 50%;
+    margin-top: 2rem;
+  }
+
+  .details {
+    margin: 0;
+  }
+
+  .details h2 {
+    font-size: 20px!important;
+    margin: 0 1rem;
+    text-align: left;
+  }
+
+  .details-text p {
+    font-size: 14px!important;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}

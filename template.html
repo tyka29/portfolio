@@ -1,32 +1,120 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/ca7dc39334.js" crossorigin="anonymous"></script>
-  <title>Personnalisation de la carte de visite</title>
   <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="style/template.css">
   <link rel="stylesheet" href="style/menu.css">
-  <link rel="stylesheet" href="style/loader.css">
-</head>
-<main>
-  <div class="loader-container">
-    <div class="loader"></div>
-  </div>
-    <header>
-        <nav>
-          <div class="logo">
-            <a href="index.html"><img src="img/logo.webp" alt=""></a>
-          </div>
-          <ul class="menu">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="contact.html">Me contacter</a></li>
-          </ul>
-        </nav>
-    </header>
+  <link rel="stylesheet" href="style/footer.css">
+  <link rel="stylesheet" href="style/template.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ6W1MP7XR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DZ6W1MP7XR');
+  </script>
+
+  <title>Tyka web design</title>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.webp" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="tycard.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="project.html">Les projets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contactez-moi</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+<main>
+  <section class="qrcode">
+    <h4 class="title">Générateur de QR code pour vCard</h4>
+    <div class="qrcode-container">
+      <div class="corps">
+        <div class="formulaire" name="formulaire">
+          <form method="POST" name="form1">
+            <!-- Improve input labels for better accessibility -->
+            <div class="form-group">
+              <label for="firstName">Prénom:</label>
+              <input type="text" id="firstName" name="firstName" class="form-control" oninput="change(this)">
+            </div>
+            <!-- Add "required" attribute to make some fields mandatory -->
+            <div class="form-group">
+              <label for="lastName">Nom:</label>
+              <input type="text" id="lastName" name="lastName" class="form-control" oninput="change(this)" required>
+            </div>
+            <!-- Add "type" attribute for email field and provide a meaningful label -->
+            <div class="form-group">
+              <label for="email">Adresse email:</label>
+              <input type="email" id="email" name="email" class="form-control" oninput="change(this)" required>
+            </div>
+            <!-- Add "type" attribute for phone field and provide a meaningful label -->
+            <div class="form-group">
+              <label for="phone">Téléphone:</label>
+              <input type="tel" id="phone" name="phone" class="form-control" oninput="change(this)">
+            </div>
+            <!-- Add "type" attribute for mobile field and provide a meaningful label -->
+            <div class="form-group">
+              <label for="mobile">Mobile:</label>
+              <input type="tel" id="mobile" name="mobile" class="form-control" oninput="change(this)">
+            </div>
+            <!-- Add "type" attribute for website field and provide a meaningful label -->
+            <div class="form-group">
+              <label for="website">Site Web:</label>
+              <input type="url" id="website" name="website" class="form-control" oninput="change(this)">
+            </div>
+            <div class="form-group">
+              <label for="company">Entreprise:</label>
+              <input type="text" id="company" name="company" class="form-control" oninput="change(this)">
+            </div>
+            <div class="form-group">
+              <label for="position">Poste:</label>
+              <input type="text" id="position" name="position" class="form-control" oninput="change(this)">
+            </div>
+            <div class="form-group">
+              <label for="address">Adresse:</label>
+              <input type="text" id="address" name="address" class="form-control" oninput="change(this)">
+            </div>
+            <div class="form-group">
+              <label for="postalCode">Code postal:</label>
+              <input type="text" id="postalCode" name="postalCode" class="form-control" oninput="change(this)">
+            </div>
+            <div class="form-group">
+              <label for="city">Ville:</label>
+              <input type="text" id="city" name="city" class="form-control" oninput="change(this)">
+            </div>
+          </form>
+          <!-- Move the QR code container outside the form -->
+          <div class="code_qr">
+            <img class="qrious" alt="QR Code">
+            <div class="information"></div>
+          </div>
+        </div>
+        <!-- Move the "shareButton" outside the form -->
+        <button class="shareButton" id="shareButton" onclick="shareByEmail()">Partager</button>
+      </div>
+    </div>
+  </section>
   <h1>Personnalisation de la carte de visite</h1>
 
   <div class="templates">
@@ -96,6 +184,15 @@
     <label for="logo">Logo :</label>
     <input type="file" id="logo" accept="image/*">
 
+    <div class="card-content" style="background-color: ${backgroundColor}; color: ${textColor}; font-family: ${fontFamily}; text-align: ${textAlignment}; border-radius: 15px;">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <img id="logoPreview" src="" alt="Logo" style="max-width: 100px; max-height: 100px; margin-bottom: 10px;">
+        <h1 style="${boldText ? 'font-weight: bold;' : ''}" id="previewName"></h1>
+        <h2 style="${boldText ? 'font-weight: bold;' : ''}" id="previewJobTitle"></h2>
+      </div>
+      <p id="previewContactInfo"></p>
+    </div>
+
     <button onclick="generateCard()">Générer la carte</button>
   </div>
 
@@ -111,34 +208,21 @@
       <!-- Implémenter le téléchargement au format PDF ici -->
     </div>
   </div>
-</main>
-<footer class="footer">
-  <div class="links">
+
+  <footer class="footer">
+    <div class="links">
       <ul>
-          <li><a href="project.html">Mes projets</a></li>
-          <li><a href="contact.html">Contactez-moi</a></li>
-      
-        <li>
-          <a href="https://facebook.com/tykadesign">
-            <i class="fa-brands fa-facebook"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/mikl291">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="contact.html">Me contacter</a></li>
       </ul>
-      <p class="text-center">
-        &copy; TYKA
-        <script>
-            document.write(new Date().getFullYear());
-        </script>
-        - Tous droits réservés.
-    </p>
-      </ul>
-  </div>
-</footer>
-  <script src="js/template.js" defer></script>
+    </div>
+  </footer>
+  <script src="js/template.js"></script>
+  <script src="js/qrious.js"></script>
+  <script src="js/qrcode.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
 </body>
 </html>
